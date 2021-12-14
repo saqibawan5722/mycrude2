@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <form #userForm="ngForm" (ngSubmit)="onAdd(userForm.value)">
+                <div style="border: 4px solid black; padding: 30px;">
+                <h1 style="color: burlywood;">Enter User</h1>
+                <div class="form-group">
+                  <input type="text" placeholder="fname" class="form-control" name="fname" ngModel  required  #name="ngModel">
+                  <small style="color: brown;" *ngIf="!name.valid && name.touched">enter the name</small><br><br>
+        
+                  <input type="text" placeholder="lname" class="form-control" name="lname" ngModel required  #lname="ngModel">
+                  <small style="color: brown;" *ngIf="!lname.valid && lname.touched">enter the name</small><br><br>
+                  <button type="submit" class="btn btn-success" [disabled]="!userForm.valid">{{editMode? 'update' : 'Add'}}</button>
+                  <!-- <button type="button" class="btn btn-success" (click)="save()" style="margin-left: 5px;">Save</button>
+                  <button type="submit" class="btn btn-success"  style="margin-left: 5px;">Fetch</button>   -->
+                </div>
+                </div>
+              </form>
+
+        </div>
+    </div>
+</div>

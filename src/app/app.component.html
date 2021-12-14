@@ -1,8 +1,9 @@
-<div class="container">
+ <div class="container">
   <div class="row">
 
-    <!-- Here Form Used -->
-    <div class="col-6 text-center">    
+     <!-- coment Here Form Used  -->
+    <div class="col-6 text-center"> 
+        
       <form #userForm="ngForm" (ngSubmit)="onAdd(userForm.value)">
         <div style="border: 4px solid black; width: 300px; padding: 30px;">
         <h1 style="color: burlywood;">Add Product</h1>
@@ -13,16 +14,16 @@
           <input type="text" placeholder="lname" class="form-control" name="lname" ngModel required #lname="ngModel">
           <small style="color: brown;" *ngIf="!lname.valid && lname.touched">enter the name</small><br><br>
           <button type="submit" class="btn btn-success" [disabled]="!userForm.valid">{{editMode? 'update' : 'Add'}}</button>
-          <!-- <button type="button" class="btn btn-success" (click)="save()" style="margin-left: 5px;">Save</button>-->
-          <!-- <button type="submit" class="btn btn-success"  style="margin-left: 5px;">Fetch</button>  -->
+          <!-- comment <button type="button" class="btn btn-success" (click)="save()" style="margin-left: 5px;">Save</button> -->
+          <!-- coment <button type="submit" class="btn btn-success"  style="margin-left: 5px;">Fetch</button>   -->
         </div>
         </div>
       </form>
     </div>
     
 
-    <!-- Here Table Used -->
-    <div class="col-6">
+     <!-- comment Here Table Used  -->
+     <div class="col-6">
       <table class="table" style="border: 2px solid black; width: 600px;">
         <thead>
           <tr style="background-color: cyan;">
@@ -43,6 +44,8 @@
             </tr>            
          </tbody>
       </table>
-    </div>    
+    </div>     
   </div>
-</div>
+</div>  
+
+<!-- <router-outlet></router-outlet> -->
